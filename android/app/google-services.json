@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "759713615164",
+    "project_id": "krushimitra-ee854",
+    "storage_bucket": "krushimitra-ee854.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759713615164:android:dc34e180add93787822239",
+        "android_client_info": {
+          "package_name": "com.example.agricplant.agriplant"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvoPyw4NHnaRczPYNkXfrctn-kz8qTuRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
