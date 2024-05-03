@@ -58,11 +58,33 @@ class _MapPageState extends State<MapPage> {
               ),
               MarkerLayer(
                 markers: [
+                  // Marker 1
                   Marker(
                     width: 35.0,
                     height: 35.0,
-                    point: center,
-                    child: const Icon(Icons.pin_drop),
+                    point: const LatLng(18.934444, 73.159722),
+                    child: Image.asset("assets/icons/map_pin.png"),
+                  ),
+                  // Marker 2
+                  Marker(
+                    width: 35.0,
+                    height: 35.0,
+                    point: const LatLng(18.904028, 73.188806),
+                    child: Image.asset("assets/icons/map_pin.png"),
+                  ),
+                  // Marker 3
+                  Marker(
+                    width: 35.0,
+                    height: 35.0,
+                    point: const LatLng(18.905139, 73.185833),
+                    child: Image.asset("assets/icons/map_pin.png"),
+                  ),
+                  // Marker 4
+                  Marker(
+                    width: 35.0,
+                    height: 35.0,
+                    point: const LatLng(18.900028, 73.188222),
+                    child: Image.asset("assets/icons/map_pin.png"),
                   ),
                 ],
               ),

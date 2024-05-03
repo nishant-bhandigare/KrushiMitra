@@ -11,7 +11,7 @@ class ServicesPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: const Text("Featured Content"),
+        title: const Text("Featured Articles"),
       ),
       body: GridView.builder(
           itemCount: services.length,

@@ -1,58 +1,31 @@
-import 'dart:ui';
 import 'package:agriplant/pages/services_page.dart';
 import 'package:agriplant/widgets/service_item.dart';
+import 'package:agriplant/widgets/youtube_video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:video_player/video_player.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../data/services.dart';
-import '../widgets/video_player.dart';
 
 class ExplorePage extends StatelessWidget {
   const ExplorePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+
+    _makingPhoneCall() async {
+      var url = Uri.parse("tel:+91 9860678418");
+      if (await canLaunchUrl(url)) {
+        await launchUrl(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
+
     return Scaffold(
       body: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
-          Padding(
-            padding: const EdgeInsets.only(bottom: 15),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Search here...",
-                      isDense: true,
-                      contentPadding: const EdgeInsets.all(12.0),
-                      border: const OutlineInputBorder(
-                        borderSide: BorderSide(),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(99),
-                        ),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
-                          color: Colors.grey.shade300,
-                        ),
-                        borderRadius: const BorderRadius.all(
-                          Radius.circular(99),
-                        ),
-                      ),
-                      prefixIcon: const Icon(IconlyLight.search),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 12),
-                  child: IconButton.filled(
-                      onPressed: () {}, icon: const Icon(IconlyLight.filter)),
-                ),
-              ],
-            ),
-          ),
           Padding(
             padding: const EdgeInsets.only(bottom: 15),
             child: SizedBox(
@@ -83,7 +56,7 @@ class ExplorePage extends StatelessWidget {
                             const Text(
                                 "Get free support from our customer service"),
                             FilledButton(
-                              onPressed: () {},
+                              onPressed: _makingPhoneCall,
                               child: const Text("Call now"),
                             ),
                           ],
@@ -103,7 +76,7 @@ class ExplorePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Featured Content",
+                "Featured Articles",
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               TextButton(
@@ -129,14 +102,28 @@ class ExplorePage extends StatelessWidget {
               ServiceItem(image: services[5].image, name: services[5].name),
             ]),
           ),
-          // const VideoPlayerWidget(
-          //   videoUrl: 'https://flutter.github.io/assets-for-api-docs/assets/videos/bee.mp4',
-          // ),
+          const SizedBox(height: 10),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Featured Content",
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+              TextButton(
+                onPressed: () {
+                },
+                child: const Text("See all"),
+              ),
+            ],
+          ),
+          // const YoutubeVideoPlayer(videoId: 'wougJaN_Ha0'),
+          // const SizedBox(height: 10),
+          const YoutubeVideoPlayer(videoId: '9_Q4RBTd3ws'),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Add your action here
           print('Floating Action Button pressed!');
         },
         child: const Icon(IconlyBroken.user3,
@@ -145,3 +132,4 @@ class ExplorePage extends StatelessWidget {
     );
   }
 }
+

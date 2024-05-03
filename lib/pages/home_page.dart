@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: MainDrawer(username: '', email: '',),
+      drawer: const MainDrawer(username: '', email: '',),
       appBar: AppBar(
         centerTitle: false,
         leading: IconButton.filledTonal(

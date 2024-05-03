@@ -29,7 +29,7 @@ class ProfilePage extends StatelessWidget {
           ),
           Center(
             child: Text(
-              "nishant@gmail.com",
+              "nishant@example.com",
               style: Theme.of(context).textTheme.bodySmall,
             ),
           ),
@@ -48,11 +48,6 @@ class ProfilePage extends StatelessWidget {
           ListTile(
             title: const Text("About us"),
             leading: const Icon(IconlyLight.infoSquare),
-            onTap: () {},
-          ),
-          ListTile(
-            title: const Text("Logout"),
-            leading: const Icon(IconlyLight.logout),
             onTap: () {},
           ),
         ],

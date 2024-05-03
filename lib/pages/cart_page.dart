@@ -42,7 +42,7 @@ class _CartPageState extends State<CartPage> {
                 children: [
                   Text("Total (${cartItems.length} items)"),
                   Text(
-                    "\$$total",
+                    "\u20B9$total",
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
                           color: Theme.of(context).colorScheme.primary,
                           fontWeight: FontWeight.bold,

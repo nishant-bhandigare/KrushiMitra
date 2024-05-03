@@ -115,65 +115,15 @@ class _DiseasePrediction2State extends State<DiseasePrediction2> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Card(
-            //   elevation: 20,
-            //   clipBehavior: Clip.hardEdge,
-            //   child: SizedBox(
-            //     width: 300,
-            //     child: SingleChildScrollView(
-            //       child: Column(
-            //         children: [
-            //           const SizedBox(
-            //             height: 18,
-            //           ),
-            //           Container(
-            //             height: 280,
-            //             width: 280,
-            //             decoration: BoxDecoration(
-            //               color: Colors.white,
-            //               borderRadius: BorderRadius.circular(12),
-            //             ),
-            //             child: filePath == null
-            //                 ? const Text('')
-            //                 : Image.file(
-            //                     filePath!,
-            //                     fit: BoxFit.fill,
-            //                   ),
-            //           ),
-            //           const SizedBox(
-            //             height: 12,
-            //           ),
-            //           Padding(
-            //             padding: const EdgeInsets.all(8.0),
-            //             child: Column(
-            //               children: [
-            //                 Text(
-            //                   label,
-            //                   style: const TextStyle(
-            //                     fontSize: 18,
-            //                     fontWeight: FontWeight.bold,
-            //                   ),
-            //                 ),
-            //                 const SizedBox(
-            //                   height: 12,
-            //                 ),
-            //                 Text(
-            //                   "The Accuracy is ${confidence.toStringAsFixed(0)}%",
-            //                   style: const TextStyle(
-            //                     fontSize: 18,
-            //                   ),
-            //                 ),
-            //                 const SizedBox(
-            //                   height: 12,
-            //                 ),
-            //               ],
-            //             ),
-            //           ),
-            //         ],
-            //       ),
-            //     ),
-            //   ),
-            // ),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text("Crop Disease Prediction", style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold)),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(4.0),
+              child: Text("Please upload an image of the infected crop"),
+            ),
+            const SizedBox(height: 50),
             filePath != null
                 ? CircleAvatar(
                     radius: 100, backgroundImage: FileImage(filePath!))
@@ -184,7 +134,7 @@ class _DiseasePrediction2State extends State<DiseasePrediction2> {
                       color: Colors.grey[200],
                       borderRadius: BorderRadius.circular(80),
                     ),
-                    child: Icon(Icons.camera_alt, size: 50),
+                    child: const Icon(Icons.camera_alt, size: 50),
                   ),
             Column(
               children: [
