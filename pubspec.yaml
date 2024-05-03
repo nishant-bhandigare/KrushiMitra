@@ -14,7 +14,7 @@ dependencies:
   badges: ^3.1.1
   timelines: ^0.1.0
   easy_stepper: ^0.7.3
-  image_picker: ^1.0.8
+  image_picker: ^0.8.5+3
   camera: ^0.10.5+9
   video_player: ^2.8.6
   flutter_map: ^6.1.0
@@ -25,8 +25,7 @@ dependencies:
   firebase_core: ^2.27.0
   firebase_auth: ^4.17.8
   cloud_firestore: ^4.15.8
-  circle_nav_bar: ^2.0.1+1
-  chewie: ^1.7.5
+  flutter_tflite: ^1.0.1
 
 dev_dependencies:
   flutter_test:

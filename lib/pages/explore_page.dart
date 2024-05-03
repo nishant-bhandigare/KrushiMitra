@@ -1,5 +1,4 @@
 import 'dart:ui';
-import 'package:chewie/chewie.dart';
 import 'package:agriplant/pages/services_page.dart';
 import 'package:agriplant/widgets/service_item.dart';
 import 'package:flutter/material.dart';

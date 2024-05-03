@@ -1,5 +1,6 @@
 import 'package:agriplant/pages/crop_recommendation_page.dart';
 import 'package:agriplant/pages/disease_prediction.dart';
+import 'package:agriplant/pages/disease_prediction_2.dart';
 import 'package:agriplant/pages/drawer.dart';
 import 'package:agriplant/pages/explore_page.dart';
 import 'package:agriplant/pages/fertilizer_recommendation_page.dart';
@@ -7,7 +8,6 @@ import 'package:agriplant/pages/profile_page.dart';
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter_iconly/flutter_iconly.dart';
-import 'package:circle_nav_bar/circle_nav_bar.dart';
 
 import 'map_page.dart';
 
@@ -19,7 +19,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final pages = [const ExplorePage(), const CropRecommendation(), const DiseasePrediction(), const FertilizerRecommendation(), const ProfilePage()];
+  final pages = [const ExplorePage(), const CropRecommendation(), const DiseasePrediction2(), const FertilizerRecommendation(), const ProfilePage()];
   int currentPageIndex = 0;
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
