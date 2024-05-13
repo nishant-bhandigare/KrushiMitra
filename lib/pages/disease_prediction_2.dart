@@ -143,6 +143,7 @@ class _DiseasePrediction2State extends State<DiseasePrediction2> {
                 ),
                 Text(
                   label,
+                  textAlign: TextAlign.center,
                   style: const TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
@@ -151,13 +152,13 @@ class _DiseasePrediction2State extends State<DiseasePrediction2> {
                 const SizedBox(
                   height: 12,
                 ),
-                if(label != "")
-                Text(
-                  "The Accuracy is ${confidence.toStringAsFixed(0)}%",
-                  style: const TextStyle(
-                    fontSize: 18,
-                  ),
-                ),
+                // if(label != "")
+                // Text(
+                //   "The Accuracy is ${confidence.toStringAsFixed(0)}%",
+                //   style: const TextStyle(
+                //     fontSize: 18,
+                //   ),
+                // ),
                 const SizedBox(
                   height: 12,
                 ),
